@@ -1,0 +1,44 @@
+@Metadata.layer:  #CUSTOMER
+
+@UI: {
+    headerInfo: {
+        typeName: 'Location',
+        typeNamePlural: 'Locations',
+        title: { label: 'Location ID', value: 'LocationId', type: #STANDARD }
+    }
+}
+annotate entity ZBS_R_APILocation with
+{
+
+  @UI.facet: [{
+     id: 'LocationId',
+     purpose: #STANDARD,
+     type: #IDENTIFICATION_REFERENCE,
+     label: 'Localation',
+     position: 10
+   }]
+
+  @UI.identification: [{ position: 10 }]
+  @UI.selectionField: [{ position: 10 }]
+  @UI.lineItem: [{ position: 10 }]
+  @EndUserText.label: 'ID Location'
+  LocationId;
+
+  @UI.identification: [{ position: 20 }]
+  @UI.selectionField: [{ position: 20 }]
+  @UI.lineItem: [{ position: 20 }]
+  @EndUserText.label: 'Location Name'
+  LocationName;
+
+  @UI.identification: [{ position: 30 }]
+  @UI.selectionField: [{ position: 30 }]
+  @UI.lineItem: [{ position: 30 }]
+  @EndUserText.label: 'Location Coordinates'
+  LocationCoordinates;
+
+  @UI.identification: [{ position: 40 }]
+  @UI.selectionField: [{ position: 40 }]
+  @UI.lineItem: [{ position: 40 }]
+  @EndUserText.label: 'Local People'
+  LocalPeople;
+}
